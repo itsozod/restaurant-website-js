@@ -1,1 +1,1 @@
-console.log("Hello World!");
+(()=>{"use strict";!function(){const e=document.querySelector("#content"),t=function(e,t){const n=document.createElement("header");n.setAttribute("id","header");const c=document.createElement("h1");return c.textContent="Coffeeland",n.appendChild(c),n}();e.appendChild(t)}()})();

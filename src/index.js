@@ -1,1 +1,7 @@
-console.log('Hello World!');
+import loadPage from "./initial-page";
+
+showPage();
+
+function showPage() {
+    loadPage();
+}
