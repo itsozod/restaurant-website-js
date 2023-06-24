@@ -17,7 +17,46 @@ function createHeader(id, text, imagePath) {
     headerContainer.appendChild(coffeeImage);
 
     header.appendChild(headerContainer);
+
+    const navbar = createNavbar()
+    header.appendChild(navbar);
     return header;
+}
+
+function createNavbar() {
+    const navbar = document.createElement('nav');
+    const homeButton = document.createElement('button');
+    homeButton.setAttribute('id', 'button-home');
+    homeButton.textContent = 'Home';
+    homeButton.classList.add('active');
+    const menuButton = document.createElement('button');
+    menuButton.setAttribute('id', 'button-menu');
+    menuButton.textContent = 'Menu';
+    const contactButton = document.createElement('button');
+    contactButton.setAttribute('id', 'button-contact');
+    contactButton.textContent = 'Contact';
+
+    homeButton.addEventListener('click', () => {
+        homeButton.classList.add('active');
+        menuButton.classList.remove('active');
+        contactButton.classList.remove('active');
+    });
+
+    menuButton.addEventListener('click', () => {
+        homeButton.classList.remove('active');
+        menuButton.classList.add('active');
+        contactButton.classList.remove('active');
+    });
+
+    contactButton.addEventListener('click', () => {
+        contactButton.classList.add('active');
+        homeButton.classList.remove('active');
+        menuButton.classList.remove('active');
+    });
+    navbar.appendChild(homeButton);
+    navbar.appendChild(menuButton);
+    navbar.appendChild(contactButton);
+    return navbar;
 }
 
 function loadPage() {
