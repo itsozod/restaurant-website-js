@@ -19,7 +19,7 @@ body {
     display: flex;
 }
 .welcome-logo {
-    margin-top: 5px;
+    margin-top: 17px;
     margin-right: 10px;
 }
 .coffee-img {
@@ -31,4 +31,20 @@ body {
     100% {
         transform: rotate(-360deg);
     }
+}
+#button-home, #button-menu, #button-contact {
+    margin: 20px;
+    border: none;
+    padding: 8px;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Caprasimo', cursive;
+}
+#button-home.active,
+#button-menu.active,
+#button-contact.active {
+  background-image: linear-gradient(lightblue, lightpink);
+  border-radius: 10px;
+  border-bottom: 4px solid orange;
 }
