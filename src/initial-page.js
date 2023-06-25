@@ -58,12 +58,20 @@ function createNavbar() {
     navbar.appendChild(contactButton);
     return navbar;
 }
+function createMain(id) {
+    const main = document.createElement('main');
+    main.setAttribute('id', id);
+    return main;
+}
 
 function loadPage() {
     const content = document.querySelector('#content');
 
     const header = createHeader('header', 'Coffeeland', './images/coffee.png');
     content.appendChild(header);
+
+    const main = createMain('main');
+    content.appendChild(main);
 }
 
 export default loadPage;
