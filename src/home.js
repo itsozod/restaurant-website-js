@@ -56,8 +56,8 @@ function createHome() {
     para3.textContent = 'Wednesday: 7AM-11PM';
     para4.textContent = 'Thursday: 7AM-11PM';
     para5.textContent = 'Friday: 7AM-11PM';
-    para6.textContent = 'Saturday: 7AM-11PM';
-    para7.textContent = 'Sunday: 7AM-11PM';
+    para6.textContent = 'Saturday: 10AM-11PM';
+    para7.textContent = 'Sunday: 10AM-11PM';
 
     workDays.appendChild(para1);
     workDays.appendChild(para2);
