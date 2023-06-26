@@ -1,3 +1,4 @@
+// function for creating header
 function createHeader(id, text, imagePath) {
     const header = document.createElement('header');
     header.setAttribute('id', id);
@@ -23,6 +24,7 @@ function createHeader(id, text, imagePath) {
     return header;
 }
 
+// function for creating nav and buttons for switching tabs
 function createNavbar() {
     const navbar = document.createElement('nav');
     const homeButton = document.createElement('button');
@@ -58,12 +60,14 @@ function createNavbar() {
     navbar.appendChild(contactButton);
     return navbar;
 }
+// function for creating main
 function createMain(id) {
     const main = document.createElement('main');
     main.setAttribute('id', id);
     return main;
 }
 
+// adding header, nav, buttons and main to the root (content) of the page and loading them
 function loadPage() {
     const content = document.querySelector('#content');
 

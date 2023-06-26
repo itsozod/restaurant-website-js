@@ -1,3 +1,4 @@
+// function for creating home tab items, information about the coffee shop
 function createHome() {
     const welcomeContainer = document.createElement('div');
     welcomeContainer.classList.add('welcome-container');
@@ -77,6 +78,7 @@ function createHome() {
     return welcomeContainer;
   }
   
+  // adding all the home tab items to the main and loading them
   function loadHome() {
     const main = document.querySelector('#main');
     const welcomeContainer = createHome();

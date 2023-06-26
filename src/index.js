@@ -2,7 +2,8 @@ import loadPage from "./initial-page";
 import loadHome from "./home";
 import loadMenu from "./menu";
 
-function showMenus() {
+// function for showing tabs after clicking on the buttons
+function showTabs() {
 const homeButton = document.querySelector("#button-home");
 const menuButton = document.querySelector("#button-menu");
 const welcomeContainer = document.querySelector(".welcome-container");
@@ -20,10 +21,11 @@ const coffeeContainer = document.querySelector(".coffee-container");
     
 }
 
+// function for showing the particular tab after the particular button was clicked
 function showPage() {
     loadPage();
     loadHome();
     loadMenu();
-    showMenus();
+    showTabs();
 }
 showPage();
