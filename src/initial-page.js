@@ -66,8 +66,32 @@ function createMain(id) {
   main.setAttribute("id", id);
   return main;
 }
+// function for creating footer and link for github page
+function createFooter() {
+  const footer = document.createElement("footer");
+  footer.classList.add("footer");
 
-// adding header, nav, buttons and main to the root (content) of the page and loading them
+  const footerSpan = document.createElement("span");
+
+  const footerPara = document.createElement("p");
+  footerPara.textContent = `Copyright © ${(footerSpan.textContent =
+    new Date().getFullYear())} itsozod`;
+
+  const footerLink = document.createElement("a");
+  footerLink.href = "https://github.com/itsozod";
+  footerLink.target = "_blank";
+
+  const icon = document.createElement("i");
+  icon.classList.add("fab", "fa-github");
+
+  footerLink.appendChild(icon);
+
+  footer.appendChild(footerPara);
+  footer.appendChild(footerLink);
+  return footer;
+}
+
+// adding header, nav, buttons, main and footer to the root (content) of the page and loading them
 function loadPage() {
   const content = document.querySelector("#content");
 
@@ -76,6 +100,9 @@ function loadPage() {
 
   const main = createMain("main");
   content.appendChild(main);
+
+  const footer = createFooter();
+  content.appendChild(footer);
 }
 
 export default loadPage;
