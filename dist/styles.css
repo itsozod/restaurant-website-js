@@ -142,6 +142,7 @@ strong {
 .days-container {
   display: flex;
   justify-content: center;
+  height: 390px;
 }
 .work-days {
   margin-top: 10px;
